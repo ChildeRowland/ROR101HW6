@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+<h2>
+	User's Page
+</h2>
+
+<h3>
+	<%  u = @user %>
+	<%= "#{u.fname} #{u.lname}" %><br>
+	<%= "#{u.email}" %><br> 
+	<%= "ID = #{u.id}" %>
+</h3>
+
+<%= link_to "delete user", user_path(@user), method: :delete %>

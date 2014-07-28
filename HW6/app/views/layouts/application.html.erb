@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HW6 - Forums</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<%= flash[:notice] if flash[:notice] %>
+
+	<h1>
+		HW6 - Forums
+	</h1>
+
+<%= yield %>
+
+	<div style="color: grey">
+		<ul>
+			<li>
+				Pull together everything you’ve learned about Rails thus far, continue to drive home your Rails knowledge, start using some of the awesome built-in Rails view helpers
+			</li>
+			<li>
+				Create a basic forum application with the following functionality:
+				<ul>
+					<li>
+						Users can signup and login. 
+					</li>	
+					<li>
+						Users can create a new forum topic.
+					</li>
+					<li>	
+						Users can see a list of existing topics, click on them to see all replies, and reply to the topics. Each of these replies should state how long it has been since it has been created.
+					</li>
+					<li>
+						To start, create a database diagram and all necessary models. Then start working on your routes, controllers, and views.
+					</li>
+				</ul>
+					<li>
+						Finish up the forum functionality from class. If you are looking for more to bite off, trying adding the functionality of creating multiple sub-forums called “Boards”. Each board can have many topics. If you’re looking to take the assignment even further, send your
+				instructor an e-mail for some additional features to work on.
+			</li>
+			<li>
+				Check out the Rails documentation on Action View to learn about even more form <a href="http://guides.rubyonrails.org/action_view_overview.html" target="_blank">helpers:</a>
+			</li>
+		</ul>
+	</div>
+
+</body>
+</html>

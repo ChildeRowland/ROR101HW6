@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<h2>
+	All Users
+</h2>
+
+<div>
+	<span style="background-color: pink"> When a user signs up they have no topics or comments. When a value is nil, the code won't run.  I tried using another if/else statement to skip a nil value, and a reject{|u| u == nil}.</span>
+	<ul>
+		<% @user.all.reverse.each do |u| %>
+		<li>
+			<%= "#{u.fname} #{u.lname}" %><br>
+			Latest Comment:
+			<%= u.comments.last %><br>
+			Posted to:
+			<%= u.comments.last %>
+		</li>
+		<% end %>
+	</ul>
+</div>

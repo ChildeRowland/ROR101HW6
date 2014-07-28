@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<h2>
+	User's All Topics Page
+</h2>
+
+<h3>
+	<%= "#{@user.fname} #{@user.lname}" %>
+</h3>
+
+<div>
+	<ul>
+		<% @user.topics.all.each do |t| %>
+		<li>
+			Topic:
+			<br><%= t.title %><br>
+			Description:
+			<br><%= t.description %><br>
+			Created:
+			<br><%= time_ago_in_words(t.created_at) + " ago" %>
+		</li>
+		<% end %>
+	</ul>
+</div>
+
+
