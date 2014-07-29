@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+<h2>
+	<%= "#{@user.fname} #{@user.lname} Topic number #{@topic.id}" %>
+</h2>
+
+<h3>
+	<% t = @topic %>
+	<%= "#{t.title} (#{t.id})" %><br>
+	<%= t.description %><br>
+	<%= "Created " + time_ago_in_words(t.created_at) + " ago" %>
+</h3>
+
+<%= link_to "delete topic", user_topic_path, method: :delete %><br>
+<%= link_to "edit topic" %>

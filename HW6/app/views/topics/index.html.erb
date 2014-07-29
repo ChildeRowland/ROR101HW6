@@ -13,7 +13,7 @@
 		<% @user.topics.all.each do |t| %>
 		<li>
 			Topic:
-			<br><%= t.title %><br>
+			<br><%= "#{t.title} (#{t.id})" %><br>
 			Description:
 			<br><%= t.description %><br>
 			Created:

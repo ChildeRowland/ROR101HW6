@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 
 <h2>
-	User's Edit Topics Page
+	<%= "User's Edit Topic number #{@topic.id} Page" %>
 </h2>
 
 <h3>
 	<%= "#{@user.fname} #{@user.lname}" %>
 </h3>
+
+<div>
+	<%= form_for([@user, @topic], method: :patch) do |f| %>
+		<%= f.label :title %>
+		<%= f.text_area :title %>
+		<%= f.label :description %>
+		<%= f.text_area :description %>
+		<%= f.submit :Update %>
+	<% end %>
+</div>

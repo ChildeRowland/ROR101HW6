@@ -9,11 +9,11 @@
 </h3>
 
 <div>
-	<%= form_for(@topic, method: :post) do |f| %>
+	<%= form_for([@user, @topic], method: :post) do |f| %>
 		<%= f.label :title %>
-		<%= f.text_field :title %>
+		<%= f.text_area :title %>
 		<%= f.label :description %>
-		<%= f.text_field :description %>
+		<%= f.text_area :description %>
 		<%= f.submit :new_topic %>
 	<% end %>
 </div>
