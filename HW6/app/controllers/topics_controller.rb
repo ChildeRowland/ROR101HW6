@@ -1,7 +1,7 @@
 class TopicsController < ApplicationController
 
 	def index
-		@user = User.find(params[:user_id])  
+		@user = User.find(params[:user_id]) 
 		# I originally tried:
 		# @topic = Topic.find(params[:user_id])
 		# But this was only allowing for one instance of topic.  I assume because it is the foreign key and not the primary.

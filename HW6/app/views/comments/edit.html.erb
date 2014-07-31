@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<h2>
+	<%= "User's Edit Comment number #{@comment.id}" %>
+</h2>
+
+<h3>
+	<%= "#{@comment.user.fname} #{@comment.user.lname}" %>
+</h3>
+
+<div>
+	<%= form_for([@user, @topic, @comment], method: :patch) do |f| %>
+		<%= f.label :body %>
+		<%= f.text_area :body %>
+		<%= f.submit :Update %>
+	<% end %>
+</div>

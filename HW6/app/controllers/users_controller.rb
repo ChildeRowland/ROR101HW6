@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
 	def index
 		@user = User.all
+		@comment = Comment.all
 	end
 
 	def show

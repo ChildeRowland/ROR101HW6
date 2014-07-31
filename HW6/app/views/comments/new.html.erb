@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<% t = @topic %>
+
+<h2>
+	<%= "New Comments for Topic: #{t.id}" %><br>
+	<%= "By: #{@user.fname} #{@user.lname}" %>
+</h2>
+
+<div>
+	<%= form_for([@user, @topic, @comment], method: :post) do |f| %>
+		<%= f.label :body %>
+		<%= f.text_area :body %>
+		<%= f.hidden_field :user_id, :value => @user.id %>
+		<%= f.submit :comment %>
+	<% end %>
+</div>

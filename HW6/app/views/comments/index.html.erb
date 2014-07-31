@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<% t = @topic %>
+
+<h2>
+	<%= "Comments Page for Topic: #{t.id}" %>
+</h2>
+
+<h3>
+
+</h3>
+
+<ul>
+	<%= "Topic: #{t.title}" %><br>
+	<%= "Description: #{t.description}" %><br>
+	<%= "Posted: #{time_ago_in_words(t.created_at)} ago" %><br>
+		<% t.comments.each do |c| %>
+		<li>
+			<%= "#{c.user.fname} #{c.user.lname} said:" %>
+			<%= "#{c.body} #{c.id}" %><br>
+			<%= "#{time_ago_in_words(c.created_at)} ago" %>
+		</li>
+		<% end %> 
+</ul>
+
+
